@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,100 +7,166 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3f2fd;
+    color: #333;
     padding: 20px;
+    line-height: 1.6;
 }
 
 /* Container */
 .container {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Header */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 h1 {
-    font-size: 2em;
-    color: #4CAF50;
+    font-size: 2.5em;
+    color: #1976d2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Container */
 .form-container {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #555;
 }
 
 input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 6px;
     border: 1px solid #ddd;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
 }
 
 button {
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 12px 15px;
+    background-color: #1976d2;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #1565c0;
+    transform: scale(1.05);
 }
 
 /* Table Styles */
 .student-list table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     border: 1px solid #ddd;
+    font-size: 1em;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f1f8ff;
+    color: #1976d2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #ffffff;
+    color: #555;
 }
 
 td button {
-    background-color: #f44336;
-    color: white;
+    padding: 8px 12px;
     border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
 td button:hover {
-    background-color: #e53935;
+    transform: scale(1.1);
+}
+
+td .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+td .delete-btn:hover {
+    background-color: #d32f2f;
 }
 
 td .edit-btn {
-    background-color: #008CBA;
+    background-color: #0288d1;
+    color: white;
 }
 
 td .edit-btn:hover {
-    background-color: #007bb5;
+    background-color: #0277bd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
 }
